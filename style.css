@@ -72,6 +72,7 @@ hr
 .Monatsleiste td{
     transform: rotate(-90deg); 
     text-align: center;
+    padding: 0.3cm;
 }
 
 .Monatsleiste table, th, td{
