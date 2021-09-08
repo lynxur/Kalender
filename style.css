@@ -1,0 +1,80 @@
+/* 
+Abstände horizontal in Powerpoint: 0,73 + 8,06 + 0,38 + 8,09 + 0,55 + 1,16
+Abstände horizontal in Powerpoint: 3,95 + 5, 83 *4 + 1,19
+da war wohl aber die Dokumentengröße nicht komplett richtig 
+*/
+
+@media print{
+    body{
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+    }
+}
+
+body
+{
+    margin: 0cm;
+    padding: 2cm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    color: #3B3838;
+}
+
+.Links{
+    margin-left: auto;
+}
+
+.grid-container
+{
+    display: grid;
+    grid-gap: 1cm;
+}
+
+.Tag
+{
+    background-color: #DBDBDB;
+    padding: 0.27cm;
+    color: #3B3838;
+    display: flex;
+    flex-direction: row;
+    font-size: 14pt;
+}
+
+hr
+{
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: #AFABAB;
+}
+
+.Linien
+{
+    margin-top: 1cm;
+    border: none;
+    background-color: #AFABAB ;
+    /* #C9C9C9 */
+}
+
+
+.Monatsleiste td{
+    transform: rotate(-90deg); 
+    text-align: center;
+}
+
+.Monatsleiste table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-right-style: hidden;
+}
+
+/*falls Monate je Links werden*/
+.Monatsleiste a {
+    background-color: #eee; /* Grey background color */
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    text-orientation: sideways;
+  }
