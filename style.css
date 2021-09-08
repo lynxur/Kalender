@@ -69,12 +69,16 @@ hr
     margin-left: 1cm;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    border-left: 1px solid #AFABAB;
 }
 
 .Leiste p{
     transform: rotate(-90deg);
     text-align: center;
+    flex: 1 1;
 }
+
 
 .Monatsleiste td{
     transform: rotate(-90deg); 
