@@ -67,6 +67,13 @@ hr
     right: 0px;    
     float: right;
     margin-left: 1cm;
+    display: flex;
+    flex-direction: column;
+}
+
+.Leiste p{
+    transform: rotate(-90deg);
+    text-align: center;
 }
 
 .Monatsleiste td{
