@@ -76,7 +76,6 @@ hr
 .Leiste p{
     transform: rotate(-90deg);
     text-align: center;
-    flex: 1 1;
 }
 
 
