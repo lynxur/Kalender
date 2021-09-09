@@ -15,7 +15,10 @@ da war wohl aber die Dokumentengröße nicht komplett richtig
 body
 {
     margin: 0cm;
-    padding: 2cm;
+    padding: 0cm;
+    padding-left: 1cm;
+    padding-top: 2cm;
+    padding-bottom: 2cm;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
     color: #3B3838;
@@ -80,7 +83,9 @@ hr
 
 .Titel{
     text-align: center;
-    color: #3B3838;
+    font-size: 20pt;
+    margin: 0cm;
+    margin-bottom: 1.5cm;
 }
 
 .Monatsleiste td{
@@ -108,26 +113,23 @@ hr
 .Monatstabelle{
     margin-left: auto;
     margin-right: auto;
-    table-layout: auto;
-    border-collapse: collapse;
-}
-
-.Monatstabelle table, th, td{
-    border: 1px solid #AFABAB;
-    border-collapse: collapse;
-    width: auto;
+    width: 100%;
     table-layout: fixed;
-
+    border-collapse: collapse;
+    line-height: 50px;
 }
 
-.Monatstabelle td{
-    text-align: left;
+.Monatstabelle table, td{
+    border: 1px solid #AFABAB;
     color: #AFABAB;
+    text-align: left;
     font-size: 10pt;
 }
 
-.Monatstabelle th{
+.Wochentage td{
     border-left: hidden;
     border-right: hidden;
     border-top: hidden;
+    color: black;
+    text-align: center;
 }
