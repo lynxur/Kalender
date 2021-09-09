@@ -78,6 +78,10 @@ hr
     text-align: center;
 }
 
+.Titel{
+    text-align: center;
+    color: #3B3838;
+}
 
 .Monatsleiste td{
     transform: rotate(-90deg); 
@@ -100,3 +104,30 @@ hr
     text-decoration: none; /* Remove underline from links */
     text-orientation: sideways;
   }
+
+.Monatstabelle{
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.Monatstabelle table, th, td{
+    border: 1px solid #AFABAB;
+    border-collapse: collapse;
+    width: auto;
+    table-layout: fixed;
+
+}
+
+.Monatstabelle td{
+    text-align: left;
+    color: #AFABAB;
+    font-size: 10pt;
+}
+
+.Monatstabelle th{
+    border-left: hidden;
+    border-right: hidden;
+    border-top: hidden;
+}
