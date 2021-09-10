@@ -49,16 +49,14 @@ body
     margin-left: auto;
 }
 
-hr
-{
+hr{
     margin: 0;
     height: 1px;
     border: none;
     background-color: #AFABAB;
 }
 
-.Linien
-{
+.Linien{
     margin-top: 1cm;
     border: none;
     background-color: #AFABAB ;
@@ -108,7 +106,7 @@ hr
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
     text-orientation: sideways;
-  }
+}
 
 .Monatstabelle{
     margin-left: auto;
