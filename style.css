@@ -119,11 +119,8 @@ hr{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    height: 50px;
     vertical-align: top;
 }
-
-
 
 .Monatstabelle td{
     display: table-cell;
@@ -132,6 +129,8 @@ hr{
     vertical-align: top;
     text-align: left;
     font-size: 10pt;
+    padding: 5px;
+    padding-bottom: 70px;
 }
 
 .Wochentage td{
@@ -140,4 +139,5 @@ hr{
     border-top: hidden;
     color: black;
     text-align: center;
+    padding: 5px;
 }
