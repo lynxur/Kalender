@@ -17,21 +17,26 @@ body
     margin: 0cm;
     padding: 0cm;
     padding-left: 1cm;
-    padding-top: 2cm;
-    padding-bottom: 2cm;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
     color: #3B3838;
+    width: 21cm;
+    height: 30.7cm;
 }
 
 .main-container{
-    display: flex;
+    display: flex;  
 }
 
 .grid-container
 {
     display: grid;
     grid-gap: 1cm;
+}
+
+.content-container{
+    padding-top: 2cm;
+    padding-bottom: 2cm;
     flex: 1;
 }
 
@@ -114,12 +119,17 @@ hr{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    line-height: 50px;
+    height: 50px;
+    vertical-align: top;
 }
 
-.Monatstabelle table, td{
+
+
+.Monatstabelle td{
+    display: table-cell;
     border: 1px solid #AFABAB;
     color: #AFABAB;
+    vertical-align: top;
     text-align: left;
     font-size: 10pt;
 }
