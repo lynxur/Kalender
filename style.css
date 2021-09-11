@@ -14,12 +14,11 @@ body{
     font-size: 14pt;
     color: #3B3838;
     width: 21cm;
-    height: 31cm;
 }
 
 .main-container{
     display: flex;  
-    height: 31cm;
+    height: 30.7cm;
 }
 
 .content-container{
