@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Kalender</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+
+        {% for woche in wochen %}
+
+            <div class="main-container">
+
+                <div class="content-container">
+
+                    <p class="Titel">{{woche.monat}}</p>
+
+                    <div class="grid-container">
+
+                        <!-- Wochentage Grid -->
+                        <div class="grid-container grid-item">
+
+                            {% for tag in woche.tage %}
+                            
+                                <div class="grid-item" style="grid-column-start: {{tag['table-ID']}}">
+                                    <div class="Tag">
+                                        <div>
+                                            {{tag.name}}
+                                        </div>
+                                        <div class="Links">
+                                            {{tag.datum}}
+                                            <!-- TODO Pythonscript-->
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <hr class="Linien" />
+                                    <hr class="Linien" />
+                                    <hr class="Linien" />
+                                    <hr class="Linien" />
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Monatleiste vertikal -->
+                <div class="Leiste">
+                    <p></p>
+                    <hr />
+                    <p>Jan</p>
+                    <hr />
+                    <p>Feb</p>
+                    <hr />
+                    <p>Mär</p>
+                    <hr />
+                    <p>Apr</p>
+                    <hr />
+                    <p>Mai</p>
+                    <hr />
+                    <p>Jun</p>
+                    <hr />
+                    <p>Jul</p>
+                    <hr />
+                    <p>Aug</p>
+                    <hr />
+                    <p>Sep</p>
+                    <hr />
+                    <p>Okt</p>
+                    <hr />
+                    <p>Nov</p>
+                    <hr />
+                    <p>Dez</p>
+                    <hr />
+                    <p></p>
+                </div>
+
+            </div>
+    
+        {% endfor %}
+
+    </body>
+
+</html>
