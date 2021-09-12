@@ -13,7 +13,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14pt;
     color: #3B3838;
-    width: 21cm;
 }
 
 .main-container{
@@ -30,6 +29,10 @@ body{
 .grid-container{
     display: grid;
     grid-gap: 0.5cm;
+}
+
+.grid-item{
+    margin-bottom: 0.5cm;
 }
 
 .Tag{
@@ -56,7 +59,6 @@ hr{
 
 .Leiste{
     width: 1cm;
-    right: 0px;    
     float: right;
     margin-left: 0.75cm;
     display: flex;
@@ -84,15 +86,11 @@ hr{
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
-    vertical-align: top;
 }
 
 .Monatstabelle td{
-    display: table-cell;
     border: 1px solid #AFABAB;
     color: #AFABAB;
-    vertical-align: top;
-    text-align: left;
     font-size: 10pt;
     padding: 5px;
     padding-bottom: 70px;
@@ -104,5 +102,5 @@ hr{
     border-top: hidden;
     color: black;
     text-align: center;
-    padding: 7px;
+    padding: 0.25cm;
 }
