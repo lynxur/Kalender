@@ -15,6 +15,13 @@ body{
     color: #3B3838;
 }
 
+hr{
+    margin: 0;
+    height: 1px;
+    border: none;
+    background-color: #AFABAB;
+}
+
 .main-container{
     display: flex;  
     height: 30.7cm;
@@ -35,6 +42,14 @@ body{
     margin-bottom: 0.5cm;
 }
 
+.Titel{
+    text-align: center;
+    font-size: 20pt;
+    color: black;
+    margin: 0cm;
+    margin-bottom: 1.5cm;
+}
+
 .Tag{
     background-color: #DBDBDB;
     padding: 0.27cm;
@@ -44,13 +59,6 @@ body{
 
 .Links{
     margin-left: auto;
-}
-
-hr{
-    margin: 0;
-    height: 1px;
-    border: none;
-    background-color: #AFABAB;
 }
 
 .Linien{
@@ -70,14 +78,6 @@ hr{
 .Leiste p{
     transform: rotate(-90deg);
     text-align: center;
-}
-
-.Titel{
-    text-align: center;
-    font-size: 20pt;
-    color: black;
-    margin: 0cm;
-    margin-bottom: 1.5cm;
 }
 
 .Monatstabelle{
