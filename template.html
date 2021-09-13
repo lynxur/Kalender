@@ -16,7 +16,8 @@
                 <div class="content-container">
 
                     <p class="Titel">{{seite.monat}}</p>
-
+                    
+                    {% if seite.type == "Woche" %}
                     <div class="grid-container">
 
                         <!-- Wochentage Grid -->
@@ -46,7 +47,65 @@
                         </div>
 
                     </div>
-
+                    {% endif %}
+                    {% if seite.type == "Uebersicht" %}
+                    <table class="Monatstabelle">
+                        <tr class="Wochentage">
+                            <td>Montag</td>
+                            <td>Dienstag</td>
+                            <td>Mittwoch</td>
+                            <td>Donnerstag</td>
+                            <td>Freitag</td>
+                            <td>Samstag</td>
+                            <td>Sonntag</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                    </table>
+                    {% endif %}
                 </div>
 
                 <!-- Monatleiste vertikal -->

@@ -31,8 +31,22 @@ anz_wochenseiten = len(dates) // 7
 
 seiten = []
 for wdx in range(anz_wochenseiten):
+    # Monatsübersicht
+    if len(seiten) == 0 or \
+            seiten[-1]["monat"] != dates[wdx * 7 + 6].strftime("%B"):
+        seiten.append(
+            {
+                "monat": dates[wdx * 7 + 6].strftime("%B"),
+                "type": "Uebersicht",
+                "tage": [
+                    #TODO
+                ],
+            }
+        )
+
     seite = {
         "monat": dates[wdx * 7 + 6].strftime("%B"),
+        "type": "Woche",
         "tage": [],
         }
     for tdx in range(7):
