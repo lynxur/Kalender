@@ -9,20 +9,20 @@
 
     <body>
 
-        {% for woche in wochen %}
+        {% for seite in seiten %}
 
             <div class="main-container">
 
                 <div class="content-container">
 
-                    <p class="Titel">{{woche.monat}}</p>
+                    <p class="Titel">{{seite.monat}}</p>
 
                     <div class="grid-container">
 
                         <!-- Wochentage Grid -->
                         <div class="grid-container grid-item">
 
-                            {% for tag in woche.tage %}
+                            {% for tag in seite.tage %}
                             
                                 <div class="grid-item" style="grid-column-start: {{tag['table-ID']}}">
                                     <div class="Tag">
