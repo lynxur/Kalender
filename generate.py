@@ -5,8 +5,8 @@ from jinja2 import Template
 # Setze Region für Sprache
 locale.setlocale(locale.LC_TIME, "de_DE")
 
-with open("template.html", "r") as F:
-    templatetext = F .read()
+with open("template.html", "rb") as F:
+    templatetext = F.read().decode("utf-8")
 
 tempi = Template(templatetext)
 
