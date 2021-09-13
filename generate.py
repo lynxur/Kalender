@@ -55,8 +55,8 @@ for wdx in range(anz_wochenseiten):
 
 outstring = tempi.render(seiten = seiten)
 
-with open("renderedhtml.html", "w") as F:
-    F.write(outstring)
+with open("renderedhtml.html", "wb") as F:
+    F.write(outstring.encode('utf-8'))
 
 
 
