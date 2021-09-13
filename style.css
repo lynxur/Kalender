@@ -25,6 +25,7 @@ hr{
 .main-container{
     display: flex;  
     height: 30.7cm;
+    page-break-after: always;
 }
 
 .content-container{
