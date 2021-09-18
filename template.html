@@ -49,6 +49,7 @@
                     </div>
                     {% endif %}
                     {% if seite.type == "Uebersicht" %}
+                    
                     <table class="Monatstabelle">
                         <tr class="Wochentage">
                             <td>Montag</td>
@@ -59,52 +60,17 @@
                             <td>Samstag</td>
                             <td>Sonntag</td>
                         </tr>
+                      
+                        {% for woche in seite.wochen %}
                         <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
+                            {% for tag in woche %}
+                            <td> {{tag}} </td>
+                            {% endfor %}
                         </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                        </tr>
+                        {% endfor %}
+
                     </table>
+
                     {% endif %}
                 </div>
 
