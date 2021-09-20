@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
+@page {
+    size: A4 portrait;
+    margin: 0cm;
+}
+
 @media print{
     body{
         width: 21cm;
