@@ -76,7 +76,7 @@ def date_iterator(start_date: date, step: timedelta, num:int) -> Iterable[date]:
 parser = argparse.ArgumentParser(
     description='Renders the html for a printable calendar.', 
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--year', type=int, help=f'The year of the calendar.', default=datetime.now().year + 1)
+parser.add_argument('--year', type=int, help='The year of the calendar.', default=datetime.now().year + 1)
 parser.add_argument('--region', type=str, help='The region code for the calendar. Mostly used for formating dates.', default="de_DE")
 parser.add_argument('--no-browser', '-nb', action='store_true', help='Don\'t open rendered file in the default browser.')
 parser.add_argument('--output', '-o', type=str, help='Output file of the rendering containing the calendar.', default='renderedhtml.html')
@@ -110,7 +110,7 @@ while current_date <= real_end_date:
     # Add Wochenseite
     seiten.append(build_wochen_seite(current_date))  
     # Increment to the next week
-    current_date += timedelta(days=7)
+    current_date += timedelta(weeks=1)
 
 # Render the dict and list struckture via jinja2 and the loaded template
 outstring = tempi.render(
