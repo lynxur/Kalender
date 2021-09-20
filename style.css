@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
 @media print{
     body{
         width: 21cm;
-        height: 29.7cm;
+        height: 30.7cm;
     }
 }
 
@@ -20,6 +21,26 @@ hr{
     height: 1px;
     border: none;
     background-color: #AFABAB;
+}
+
+.cover-container {
+    position: relative;
+}
+
+.cover-title {
+    position: absolute;
+    top: 8.3cm;
+    left: 3.3cm;
+    font-size: 70pt;
+    margin: 0;
+    padding: 0;
+    font-family: 'Grechen Fuemen', cursive;
+}
+
+.cover-img {
+    bottom: 0;
+    width: 21cm;
+    height: 30.7cm;
 }
 
 .main-container{

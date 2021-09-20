@@ -116,7 +116,8 @@ while current_date <= real_end_date:
 outstring = tempi.render(
     seiten = seiten,
     day_names = list(calendar.day_name),
-    month_names = list(calendar.month_name)[1:])
+    month_names = list(calendar.month_name)[1:],
+    year=args.year)
 
 # Save the rendered html to the output file
 with open(args.output, "wb") as F:
