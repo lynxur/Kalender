@@ -58,32 +58,41 @@ def date_iterator(start_date: date, step: timedelta, num:int) -> Iterable[date]:
 # Set region for corret date formating depending on the region
 locale.setlocale(locale.LC_TIME, "de_DE")
 
+# Open the template file
 with open("template.html", "rb") as F:
     templatetext = F.read().decode("utf-8")
 
+# Create jinja2 template object from the template file content
 tempi = Template(templatetext)
 
+# Year parameter, todo argparse
 year = 2022
 
+# Create date objects
 start_date = date(year, 1, 1)
 end_date = date(year, 12, 31)
 
+# Modify start and end date that they begin with a monday and end with a sunday
 real_end_date = get_next_sunday_date(end_date)
 current_date = get_previous_monday_date(start_date)
 
+# Create all pages of the calendar while iterating through the weeks
 seiten = []
-
 while current_date <= real_end_date:
-    # Monatsübersicht
+    # Add Monatsübersicht
     if len(seiten) == 0 or seiten[-1]["monat"] != get_next_sunday_date(current_date).strftime("%B"):
        seiten.append(build_monats_ueberblick(current_date)) 
-    #Wochenseite
+    # Add Wochenseite
     seiten.append(build_wochen_seite(current_date))  
+    # Increment to the next week
     current_date += timedelta(days=7)
 
+# Render the dict and list struckture via jinja2 and the loaded template
 outstring = tempi.render(seiten = seiten)
 
+# Save the rendered html to the output file
 with open("renderedhtml.html", "wb") as F:
     F.write(outstring.encode('utf-8'))
 
+# Open the output file with the webbrowser
 webbrowser.open("renderedhtml.html")
