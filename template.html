@@ -52,13 +52,9 @@
                     
                     <table class="Monatstabelle">
                         <tr class="Wochentage">
-                            <td>Montag</td>
-                            <td>Dienstag</td>
-                            <td>Mittwoch</td>
-                            <td>Donnerstag</td>
-                            <td>Freitag</td>
-                            <td>Samstag</td>
-                            <td>Sonntag</td>
+                            {% for day in day_names %}
+                            <td>{{day}}</td>
+                            {% endfor %}
                         </tr>
                       
                         {% for woche in seite.wochen %}
@@ -73,35 +69,14 @@
 
                     {% endif %}
                 </div>
-
                 <!-- Monatleiste vertikal -->
                 <div class="Leiste">
                     <p></p>
                     <hr />
-                    <p>Jan</p>
+                    {% for month in month_names %}
+                    <p>{{month[0:3]}}</p>
                     <hr />
-                    <p>Feb</p>
-                    <hr />
-                    <p>Mär</p>
-                    <hr />
-                    <p>Apr</p>
-                    <hr />
-                    <p>Mai</p>
-                    <hr />
-                    <p>Jun</p>
-                    <hr />
-                    <p>Jul</p>
-                    <hr />
-                    <p>Aug</p>
-                    <hr />
-                    <p>Sep</p>
-                    <hr />
-                    <p>Okt</p>
-                    <hr />
-                    <p>Nov</p>
-                    <hr />
-                    <p>Dez</p>
-                    <hr />
+                    {% endfor %}
                     <p></p>
                 </div>
 

@@ -1,7 +1,9 @@
+import calendar
 import locale
 import webbrowser
+import argparse
 from typing import Dict, Iterable
-from datetime import date, timedelta
+from datetime import datetime, date, timedelta
 from dateutil.relativedelta import relativedelta
 from jinja2 import Template
 
@@ -70,9 +72,18 @@ def date_iterator(start_date: date, step: timedelta, num:int) -> Iterable[date]:
     """
     return (start_date + n * step for n in range(num))
 
+parser = argparse.ArgumentParser(
+    description='Renders the html for a printable calendar.', 
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+parser.add_argument('--year', type=int, help=f'The year of the calendar.', default=datetime.now().year + 1)
+parser.add_argument('--region', type=str, help='The region code for the calendar. Mostly used for formating dates.', default="de_DE")
+parser.add_argument('--no-browser', '-nb', action='store_true', help='Don\'t open rendered file in the default browser.')
+parser.add_argument('--output', '-o', type=str, help='Output file of the rendering containing the calendar.', default='renderedhtml.html')
+
+args = parser.parse_args()
 
 # Set region for corret date formating depending on the region
-locale.setlocale(locale.LC_TIME, "de_DE")
+locale.setlocale(locale.LC_TIME, args.region)
 
 # Open the template file
 with open("template.html", "rb") as F:
@@ -81,12 +92,9 @@ with open("template.html", "rb") as F:
 # Create jinja2 template object from the template file content
 tempi = Template(templatetext)
 
-# Year parameter, todo argparse
-year = 2022
-
 # Create date objects
-start_date = date(year, 1, 1)
-end_date = date(year, 12, 31)
+start_date = date(args.year, 1, 1)
+end_date = date(args.year, 12, 31)
 
 # Modify start and end date that they begin with a monday and end with a sunday
 real_end_date = get_next_sunday_date(end_date)
@@ -104,11 +112,15 @@ while current_date <= real_end_date:
     current_date += timedelta(days=7)
 
 # Render the dict and list struckture via jinja2 and the loaded template
-outstring = tempi.render(seiten = seiten)
+outstring = tempi.render(
+    seiten = seiten,
+    day_names = list(calendar.day_name),
+    month_names = list(calendar.month_name)[1:])
 
 # Save the rendered html to the output file
-with open("renderedhtml.html", "wb") as F:
+with open(args.output, "wb") as F:
     F.write(outstring.encode('utf-8'))
 
 # Open the output file with the webbrowser
-webbrowser.open("renderedhtml.html")
+if not args.no_browser:
+    webbrowser.open(args.output)
