@@ -19,7 +19,7 @@
 
             <div class="main-container">
 
-                <div class="content-container">
+                <div {% if seite.type == "Uebersicht" %}id="{{seite.monat}}"{% endif %} class="content-container">
 
                     <p class="Titel">{{seite.monat}}</p>
                     
@@ -79,7 +79,7 @@
                     <p></p>
                     <hr />
                     {% for month in month_names %}
-                    <p>{{month[0:3]}}</p>
+                    <p><a href="#{{month}}">{{month[0:3]}}</a></p>
                     <hr />
                     {% endfor %}
                     <p></p>
