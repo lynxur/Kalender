@@ -2,6 +2,8 @@
 
 # Installation
 
+To install the nessesary dependencies type:
+
 ```bash
 pip3 install -r requirements.txt
 ```
