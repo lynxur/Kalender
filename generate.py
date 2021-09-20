@@ -6,12 +6,21 @@ from dateutil.relativedelta import relativedelta
 from jinja2 import Template
 
 def get_next_sunday_date(input_date: date) -> date:
+    """
+    Returns the date of the next sunday.
+    """
     return input_date + timedelta(days=(6 - input_date.weekday()))
 
 def get_previous_monday_date(input_date: date) -> date:
+    """
+    Returns the date of the previous monday.
+    """
     return input_date - timedelta(days=input_date.weekday())
 
 def build_wochen_seite(input_date: date) -> Dict:
+    """
+    Builds the datastructure for the week page.
+    """
     # Create page dictionary
     seite = {
         "monat": get_next_sunday_date(input_date).strftime("%B"),
@@ -33,6 +42,10 @@ def build_wochen_seite(input_date: date) -> Dict:
     return seite
 
 def build_monats_ueberblick(input_date: date) -> Dict:
+    """
+    Builds the datastructure for the month overview.
+    It expects the input date to be the first day of the month.
+    """
     wochen = []
 
     current_date = get_previous_monday_date(input_date)
@@ -52,6 +65,9 @@ def build_monats_ueberblick(input_date: date) -> Dict:
         }
 
 def date_iterator(start_date: date, step: timedelta, num:int) -> Iterable[date]:
+    """
+    Iterates a timedelta n times beginning at the given date.
+    """
     return (start_date + n * step for n in range(num))
 
 
