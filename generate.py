@@ -1,7 +1,7 @@
 import locale
 import webbrowser
 from typing import Dict, Iterable
-from datetime import date, time, timedelta
+from datetime import date, timedelta
 from dateutil.relativedelta import relativedelta
 from jinja2 import Template
 
