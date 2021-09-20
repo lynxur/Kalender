@@ -1,4 +1,5 @@
 import locale
+import webbrowser
 from datetime import date, time, timedelta
 from jinja2 import Template
 
@@ -81,8 +82,4 @@ outstring = tempi.render(seiten = seiten)
 with open("renderedhtml.html", "wb") as F:
     F.write(outstring.encode('utf-8'))
 
-
-
-
-
-
+webbrowser.open("renderedhtml.html")
