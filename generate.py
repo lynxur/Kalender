@@ -51,7 +51,8 @@ def build_monats_ueberblick(input_date: date) -> Dict:
     wochen = []
 
     current_date = get_previous_monday_date(input_date)
-    real_end_date = get_next_sunday_date(input_date + relativedelta(months=1))
+    first_of_the_month = date(get_next_sunday_date(input_date).year, get_next_sunday_date(input_date).month, 1)
+    real_end_date = get_next_sunday_date(first_of_the_month + relativedelta(months=1))
 
     while current_date <= real_end_date:
         tage = []
