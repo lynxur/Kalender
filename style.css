@@ -107,6 +107,11 @@ hr{
     text-align: center;
 }
 
+.Leiste a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .Monatstabelle{
     margin-left: auto;
     margin-right: auto;
