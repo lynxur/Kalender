@@ -2,9 +2,10 @@
 
 A simple minimalistic calender for paper or pdf usage. There is an overview for each month with all its dates and a page for each week with extra space for notes. 
 
+## Download
+To simply get the pdf for your language simply download the [latest release](https://github.com/lynxur/Kalender/releases/latest).
 
-
-# Installation
+## Installation
 
 To install the nessesary dependencies type:
 
@@ -12,7 +13,7 @@ To install the nessesary dependencies type:
 pip3 install -r requirements.txt
 ```
 
-# Usage
+## Usage
 
 The Kalender is rendered using a Python script and a html template. The rendered html gets converted to a pdf file afterwards. This can be done manually or in a automatic headless way. To change things like the region settings or the year, have a look at the help page of the template rendering script:
 
