@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip3 install -r requirements.txt
-          apt install chromium-browser
+          sudo apt install chromium-browser
           
       - name: Install locales
         run: |
