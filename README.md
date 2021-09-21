@@ -21,7 +21,7 @@ The Kalender is rendered using a Python script and a html template. The rendered
 python3 generate.py -h
 ```
 
-## Manual
+### Manual
 
 Run the Python script to render the template.
 ```bash
@@ -34,7 +34,7 @@ Use print the html file in the opening browser. Ideally, deactivate borders, act
 You can print the file on paper or to a pdf file. The later also features working in document links for faster navigation.
 
 
-## Headless
+### Headless
 
 To render the pdf file headless, run the following commands:
 
