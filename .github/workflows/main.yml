@@ -1,0 +1,48 @@
+name: Auto Render
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip3 install -r requirements.txt
+          apt install chromium-browser
+          
+      - name: Install locales
+        run: |
+          locale-gen de_DE
+          locale-gen de_DE.UTF-8
+          update-locale
+          
+      - name: Render template to html 
+        run: | 
+          # Render for the next year
+          python3 generate.py -nb --region de_DE.UTF-8 -o "kal_de.html"
+          python3 generate.py -nb --region en_US.UTF-8 -o "kal_us.html"
+          
+      - name: Render html to pdf 
+        run: | 
+          chromium-browser --no-sandbox --headless --disable-gpu --print-to-pdf kal_de.html; mv output.pdf kal_de.pdf
+          chromium-browser --no-sandbox --headless --disable-gpu --print-to-pdf kal_us.html; mv output.pdf kal_us.pdf
+          
+      - name: Check for files
+        run: |
+          file kal_de.pdf
+          file kal_us.pdf
+        
