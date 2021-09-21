@@ -5,7 +5,7 @@ A simple minimalistic calender for paper or pdf usage. There is an overview for 
 ![Unbenannt](https://user-images.githubusercontent.com/82907637/134244889-3042d7e7-c5a4-4d10-9218-422018c173b8.png)
 
 ## Download
-To simply get the pdf for your language simply download the [latest release](https://github.com/lynxur/Kalender/releases/latest).
+To simply get the pdf for your language download the [latest release](https://github.com/lynxur/Kalender/releases/latest).
 
 ## Installation
 
