@@ -27,6 +27,7 @@ Run the Python script to render the template.
 python3 generate.py
 ```
 
+
 Use print the html file in the opening browser. Ideally, deactivate borders, activate background images, set page type to A4 and deactivate page numbers and footer/header in the print settings.
 
 You can print the file on paper or to a pdf file. The later also features working in document links for faster navigation.
