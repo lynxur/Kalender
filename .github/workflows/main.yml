@@ -27,9 +27,9 @@ jobs:
           
       - name: Install locales
         run: |
-          locale-gen de_DE
-          locale-gen de_DE.UTF-8
-          update-locale
+          sudo locale-gen de_DE
+          sudo locale-gen de_DE.UTF-8
+          sudo update-locale
           
       - name: Render template to html 
         run: | 
