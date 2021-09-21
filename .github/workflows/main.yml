@@ -42,8 +42,10 @@ jobs:
           google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf kal_de.html; mv output.pdf kal_de.pdf
           google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf kal_us.html; mv output.pdf kal_us.pdf
           
-      - name: Check for files
-        run: |
-          file kal_de.pdf
-          file kal_us.pdf
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            kal_de.pdf
+            kal_us.pdf
         
