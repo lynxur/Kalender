@@ -1,5 +1,9 @@
 # Kalender
 
+A simple minimalistic calender for paper or pdf usage. There is an overview for each month with all its dates and a page for each week with extra space for notes. 
+
+
+
 # Installation
 
 To install the nessesary dependencies type:
@@ -25,7 +29,7 @@ python3 generate.py
 
 Use print the html file in the opening browser. Ideally, deactivate borders, activate background images, set page type to A4 and deactivate page numbers and footer/header in the print settings.
 
-You can print the file on paper or to an pdf file. The later also features working in document links for faster navigation.
+You can print the file on paper or to a pdf file. The later also features working in document links for faster navigation.
 
 
 ## Headless
