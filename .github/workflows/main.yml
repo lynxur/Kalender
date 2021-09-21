@@ -22,7 +22,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip3 install -r requirements.txt
-          sudo apt install chromium-browser
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
           
       - name: Install locales
         run: |
@@ -38,8 +39,8 @@ jobs:
           
       - name: Render html to pdf 
         run: | 
-          chromium-browser --no-sandbox --headless --disable-gpu --print-to-pdf kal_de.html; mv output.pdf kal_de.pdf
-          chromium-browser --no-sandbox --headless --disable-gpu --print-to-pdf kal_us.html; mv output.pdf kal_us.pdf
+          google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf kal_de.html; mv output.pdf kal_de.pdf
+          google-chrome --no-sandbox --headless --disable-gpu --print-to-pdf kal_us.html; mv output.pdf kal_us.pdf
           
       - name: Check for files
         run: |
